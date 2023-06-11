@@ -1,0 +1,53 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        x:Class="BAudioPlayer.MainWindow"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prop="clr-namespace:BAudioPlayer.Properties"
+        xmlns:local="clr-namespace:BAudioPlayer"
+        mc:Ignorable="d"
+        Style="{StaticResource CurrentThemeWindow}"
+        Title="Bluetooth Audio Player" Height="484" Width="448" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <TabControl TabStripPlacement="Left" Style="{StaticResource CurrentThemeControl}">
+        <TabItem x:Name="MainTab" IsSelected="True" Style="{StaticResource CurrentThemeControl}" Header="Main Window">
+            <TabItem.Content>
+                <Grid>
+                    <Button x:Name="PrevButton" Content="Pr" HorizontalAlignment="Left" Height="28" Margin="25,131,0,0" VerticalAlignment="Top" Width="28" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="Black"/>
+                    <Button x:Name="PlayPauseButton" Content="PP" HorizontalAlignment="Left" Height="28" Margin="58,131,0,0" VerticalAlignment="Top" Width="28" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="Black"/>
+                    <Button x:Name="StopButton" Content="S" HorizontalAlignment="Left" Height="28" Margin="91,131,0,0" VerticalAlignment="Top" Width="28" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="Black"/>
+                    <Button x:Name="NextButton" Content="N" HorizontalAlignment="Left" Height="28" Margin="124,131,0,0" VerticalAlignment="Top" Width="28" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="Black"/>
+
+                    <Label Style="{StaticResource CurrentThemeControl}" x:Name="ConnectionsLabel" HorizontalAlignment="Center" Height="39" Margin="0,346,0,0" VerticalAlignment="Top" Width="251" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="CONNECTIONS"/>
+                    <Button Style="{StaticResource CurrentThemeControl}" x:Name="ConnectButton" Content="CONNECT" HorizontalAlignment="Left" Height="23" Margin="44,307,0,0" VerticalAlignment="Top" Width="109"/>
+                    <Label Style="{StaticResource CurrentThemeControl}" x:Name="VolumeLabel" HorizontalAlignment="Left" Height="39" Margin="169,92,0,0" VerticalAlignment="Top" Width="145" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="VOLUME"/>
+                    <Slider x:Name="VolumeSlider" HorizontalAlignment="Left" Margin="169,136,0,0" VerticalAlignment="Top" Width="142" Maximum="100" SmallChange="1" LargeChange="10" TickFrequency="1" Value="100"/>
+                    <Border Width="318" MaxHeight="63" Margin="10,30,10,0" VerticalAlignment="Top">
+                        <TextBlock Style="{StaticResource CurrentThemeText}" x:Name="TrackInfoBlock" Width="318" MaxHeight="63" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top"  FontSize="14" TextAlignment="Center" Text="TrackInfo"/>
+                    </Border>
+                    <CheckBox Style="{StaticResource CurrentThemeForeground}" x:Name="ConnectBPCBox" Content="BPC" HorizontalAlignment="Left" Margin="242,312,0,0" VerticalAlignment="Top" IsChecked="{Binding Source={x:Static prop:Settings.Default}, Path=BPCConnect, Mode=TwoWay}"/>
+                    <CheckBox Style="{StaticResource CurrentThemeForeground}" x:Name="ConnectA2DPBox" Content="A2DP" HorizontalAlignment="Left" Margin="166,312,0,0" VerticalAlignment="Top" IsChecked="{Binding Source={x:Static prop:Settings.Default}, Path=A2DPConnect, Mode=TwoWay}"/>
+                    <ComboBox x:Name="ConnectionComboBox" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top" Width="252"/>
+
+                    <local:DeviceConnectionInfo Style="{StaticResource CurrentThemeControl}" x:Name="CurrentConnectionController" HorizontalAlignment="Center" Margin="0,188,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem x:Name="SettingsWindow" Style="{StaticResource CurrentThemeControl}" Header="Settings">
+            <TabItem.Content>
+                <Grid>
+                    <RadioButton Style="{StaticResource CurrentThemeForeground}" x:Name="LightThemeRadio" Content="Light Theme" HorizontalAlignment="Left" Margin="64,29,0,0" VerticalAlignment="Top" GroupName="ThemeRadio" IsChecked="{Binding Source={x:Static prop:Settings.Default}, Path=LightTheme, Mode=TwoWay}"/>
+                    <RadioButton Style="{StaticResource CurrentThemeForeground}" x:Name="DarkThemeRadio" Content="Dark Theme" HorizontalAlignment="Left" Margin="204,29,0,0" VerticalAlignment="Top" GroupName="ThemeRadio" IsChecked="{Binding Source={x:Static prop:Settings.Default}, Path=DarkTheme, Mode=TwoWay}"/>
+                    <CheckBox Style="{StaticResource CurrentThemeForeground}" x:Name="AutoconnectCheckBox" Content="Try connect on startup" HorizontalAlignment="Left" Margin="64,99,0,0" VerticalAlignment="Top" IsChecked="{Binding Source={x:Static prop:Settings.Default}, Path=Autoconnect, Mode=TwoWay}"/>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem x:Name="DebugWindow"  Style="{StaticResource CurrentThemeControl}" Header="Debug">
+            <TabItem.Content>
+                <Grid>
+                    <TextBlock Style="{StaticResource CurrentThemeText}" x:Name="DebugBlock" />
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+    </TabControl>
+</Window>

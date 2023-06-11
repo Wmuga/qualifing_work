@@ -1,0 +1,13 @@
+﻿<UserControl x:Name="userControl" x:Class="BAudioPlayer.DeviceConnectionInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BAudioPlayer"
+             mc:Ignorable="d" Height="94" Width="271">
+    <Grid>
+        <Label x:Name="DeviceLabel" Content="Device: " Height="25" Margin="0,0,125,61" VerticalAlignment="Top" HorizontalAlignment="Left" Width="136" Foreground="{Binding Foreground, ElementName=userControl}"/>
+        <Label x:Name="A2DPLabel" Content="A2DP: " HorizontalAlignment="Left" Height="25" Margin="0,30,0,0" VerticalAlignment="Top" Width="136" Foreground="{Binding Foreground, ElementName=userControl}"/>
+        <Label x:Name="BPCLabel" Content="BPC: " HorizontalAlignment="Left" Height="26" Margin="0,60,0,0" VerticalAlignment="Top" Width="136" Foreground="{Binding Foreground, ElementName=userControl}"/>
+    </Grid>
+</UserControl>

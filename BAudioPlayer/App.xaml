@@ -1,0 +1,78 @@
+﻿<Application x:Class="BAudioPlayer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prop="clr-namespace:BAudioPlayer.Properties"
+             Startup="AppStart">
+    <Application.Resources>
+        <SolidColorBrush x:Key="LightBackgroundBrush" Color="#ffffff"/>
+        <SolidColorBrush x:Key="LightForegroundBrush" Color="#000000"/>
+        <SolidColorBrush x:Key="DarkBackgroundBrush" Color="#2E2F37"/>
+        <SolidColorBrush x:Key="DarkForegroundBrush" Color="#C7C8CA"/>
+        
+
+        <Style TargetType="{x:Type Control}" x:Key="CurrentThemeControl">
+            <Setter Property="Background" Value="{StaticResource LightBackgroundBrush}" />
+            <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+            
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=LightTheme}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource LightBackgroundBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=DarkTheme}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource DarkBackgroundBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource DarkForegroundBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type TextBlock}" x:Key="CurrentThemeText">
+            <Setter Property="Background" Value="{StaticResource LightBackgroundBrush}" />
+            <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=LightTheme}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource LightBackgroundBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=DarkTheme}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource DarkBackgroundBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource DarkForegroundBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style TargetType="{x:Type Window}" x:Key="CurrentThemeWindow">
+            <Setter Property="Background" Value="{StaticResource LightBackgroundBrush}" />
+            <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=LightTheme}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource LightBackgroundBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=DarkTheme}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource DarkBackgroundBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource DarkForegroundBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type Control}" x:Key="CurrentThemeForeground">
+            <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=LightTheme}" Value="True">
+                    <Setter Property="Foreground" Value="{StaticResource LightForegroundBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Source={x:Static prop:Settings.Default}, Path=DarkTheme}" Value="True">
+                    <Setter Property="Foreground" Value="{StaticResource DarkForegroundBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type TabControl}" x:Key="CurrentThemeTab">
+            <Setter Property="Background" Value="{DynamicResource LightBackgroundBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource LightForegroundBrush}" />
+        </Style>
+
+    </Application.Resources>
+</Application>
