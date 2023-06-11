@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BluetoothPlaybackControl.BluetoothPlaybackControl" BaseTypeListCollapsed="true">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>iASKhAAUICQYAEAAAAEAAMoAAgGkIBAAAAIAAIAAJAA=</HashCode>
+      <FileName>BluetoothPlaybackControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BluetoothPlaybackControl.Pair&lt;T, T1&gt;">
+    <Position X="0.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BluetoothPlaybackControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BluetoothPlaybackControl.DeviceConnectionEventArgs">
+    <Position X="5.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BPCEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BluetoothPlaybackControl.Resources">
+    <Position X="10.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAgAREAAAAQAAAAAAAAAAgAQAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BluetoothPlaybackControl.SongMeta">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAIAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>SongMeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BluetoothPlaybackControl.IBluetoothPlaybackControl">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAUICAAAEAAAAAAAMoAAAEEIBAAAAIAAIAAAAA=</HashCode>
+      <FileName>IBluetoothPlaybackControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="BluetoothPlaybackControl.CommandType">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAAAAgAAAAAAAAAAAAAAQAACAAAAAIAAAAAA=</HashCode>
+      <FileName>BluetoothPlaybackControl.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="BluetoothPlaybackControl.DeviceAddedEventHandler">
+    <Position X="5.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgA=</HashCode>
+      <FileName>BPCEvents.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="BluetoothPlaybackControl.DeviceRemovedEventHandler">
+    <Position X="7.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BPCEvents.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="BluetoothPlaybackControl.DeviceConnectionChangedEventHandler">
+    <Position X="8.5" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BPCEvents.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="BluetoothPlaybackControl.VolumeInformationEventHandler">
+    <Position X="8.5" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BPCEvents.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="BluetoothPlaybackControl.PlaybackInformationEventHandler">
+    <Position X="5.25" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BPCEvents.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="BluetoothPlaybackControl.PlaybackStateChangedEventHandler">
+    <Position X="5.25" Y="5.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>BPCEvents.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9.08" />
+</ClassDiagram>
